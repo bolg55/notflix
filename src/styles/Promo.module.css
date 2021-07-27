@@ -1,0 +1,135 @@
+.services {
+  background: black;
+  min-width: 100vw;
+}
+
+.underline {
+  width: 100%;
+  height: 0.5rem;
+  margin: 0;
+  padding: 0;
+  background: #222222;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5rem;
+}
+
+.container h2 {
+  font-size: 3rem;
+  color: #fff;
+  /* padding-bottom: 1.5rem; */
+  font-weight: bold;
+  font-family: Helvetica;
+}
+
+.container h4 {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: left;
+  line-height: 1.5;
+  z-index: 1;
+  padding-right: 1rem;
+}
+
+.col1 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 3rem 5rem;
+}
+
+.col2 {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  background-image: url(../../public/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: fit-content;
+  margin: auto 2rem;
+}
+
+.col3 {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+@media (max-width: 769px) {
+  .container {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    margin: 3rem 1.5rem;
+    border-radius: 0.25rem;
+    padding: 1.5rem 0.5rem;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .containerOpp {
+    flex-direction: column;
+  }
+
+  .container h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .container h4 {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  .col2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    margin: 2rem 0;
+  }
+  .col2 {
+    padding: 0;
+    /* margin-bottom: -16px; */
+    margin-top: 5px;
+  }
+
+  .container h4 {
+    text-align: justify;
+  }
+}
+
+.btn {
+  /* text-transform: uppercase; */
+  background-color: #00cc66;
+  color: #fff;
+  padding: 8px 25px;
+  letter-spacing: 0.2rem;
+  display: block;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  font-size: 1.2rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  width: 12.5rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.btn:hover {
+  color: #555;
+  background-color: #00cc662f;
+}

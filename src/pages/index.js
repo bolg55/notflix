@@ -1,16 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head"
 import { signIn, signOut, useSession } from "next-auth/client"
+import Promo from "../components/Promo"
 
 export default function Home() {
   const [session, loading] = useSession()
+
   return (
     <div
-      className='flex flex-col items-center justify-center min-h-screen  bg-black overflow-hidden'
+      className='flex flex-col items-center justify-center   bg-black overflow-hidden'
       style={{
         backgroundImage:
           "linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)), url(/hero-bg.jpg)",
+
         "background-repeat": "no-repeat",
+        "background-size": "auto",
       }}
     >
       <Head>
@@ -22,30 +26,30 @@ export default function Home() {
 
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <header className='flex justify-between w-full px-12 py-10'>
+      <header className='flex justify-between w-full px-12 py-8'>
         <div>
-          <img className='h-[65px] w-auto ' src='/notflix.png' alt='notflix' />
+          <img className='h-[50px] w-auto ' src='/notflix.png' alt='notflix' />
         </div>
         <div>
           {!session ? (
             <button
               onClick={() => signIn("google")}
-              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-lg px-6 py-2 rounded'
+              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-md px-5 py-2 rounded'
             >
               Sign In
             </button>
           ) : (
             <button
               onClick={() => signOut()}
-              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-lg px-6 py-2 rounded'
+              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-md px-5 py-2 rounded'
             >
               Sign Out
             </button>
           )}
         </div>
       </header>
-      <main className='flex flex-col items-center justify-center flex-1 px-20 text-center '>
-        <h1 className='text-5xl font-bold text-white max-w-lg'>
+      <main className='flex flex-col items-center justify-center flex-1 px-20 text-center py-[8rem] '>
+        <h1 className='text-5xl font-bold text-white max-w-xl'>
           Unlimited movies, TV shows, and more.
         </h1>
         <h2 className='text-2xl text-white mt-4 mb-8'>
@@ -78,6 +82,7 @@ export default function Home() {
           </button>
         </div>
       </main>
+      <Promo />
     </div>
   )
 }
