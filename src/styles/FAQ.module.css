@@ -1,0 +1,54 @@
+.container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  width: 100vw;
+}
+
+.sectionTitle {
+  color: #fff;
+  font-family: Helvetica;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+
+.title,
+.btn {
+  color: #fff;
+  font-family: Helvetica;
+  font-size: 1.5rem;
+  transition: all 0.4s linear;
+}
+
+.qContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #303030;
+  margin-top: 0.5rem;
+  padding: 1.25rem;
+}
+
+.qContainer:hover {
+  cursor: pointer;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #303030;
+  margin-top: 1px;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: left;
+  transition: all 0.4s linear;
+}
