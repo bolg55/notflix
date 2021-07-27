@@ -36,28 +36,28 @@ export default function Home() {
           {!session ? (
             <button
               onClick={() => signIn("google")}
-              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-md px-4 py-2 rounded'
+              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-lg font-semibold px-5 py-1 rounded'
             >
               Sign In
             </button>
           ) : (
             <button
               onClick={() => signOut()}
-              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-md px-4 py-2 rounded'
+              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-md font-semibold px-5 py-1 rounded'
             >
               Sign Out
             </button>
           )}
         </div>
       </header>
-      <main className='flex flex-col items-center justify-center flex-1 px-20 text-center  py-[11rem] '>
-        <h1 className='text-5xl font-bold text-white max-w-xl'>
+      <main className='flex flex-col items-center justify-center flex-1 px-20 text-center  pt-[9rem] pb-[11rem]'>
+        <h1 className='text-5xl font-semibold text-white max-w-xl'>
           Unlimited movies, TV shows, and more.
         </h1>
         <h2 className='text-2xl text-white mt-4 mb-8'>
           Watch anywhere. Cancel anytime.
         </h2>
-        <p className='text-white font-medium'>
+        <p className='text-white text-[1.1rem] font-medium'>
           Ready to watch? Enter your email to create or restart your membership.
         </p>
         <div className='flex mt-4 '>
@@ -89,7 +89,7 @@ export default function Home() {
       <p className='text-white font-medium'>
         Ready to watch? Enter your email to create or restart your membership.
       </p>
-      <div className='flex mt-4 mb-12'>
+      <div className='flex mt-4 mb-[5rem]'>
         <input
           placeholder='Email address'
           className='bg-white p-4 w-[40vw] max-w-[400px]'
