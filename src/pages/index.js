@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head"
 import { signIn, signOut, useSession } from "next-auth/client"
 
