@@ -12,6 +12,12 @@ export default function Footer() {
             <a href='https://kellenbolger.ca'>kellenbolger.ca</a>
           </span>
         </h4>
+        <p>
+          This product uses the TMDb API but is not endorsed or certified by
+          <span>
+            <a href='https://www.themoviedb.org/'> TMDb.</a>
+          </span>
+        </p>
       </div>
     </div>
   )

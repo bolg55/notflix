@@ -1,13 +1,13 @@
 .container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 50px;
   color: #fff;
-  text-align: center;
   font-size: 1.2rem;
 }
 
@@ -20,14 +20,21 @@
 }
 
 .info {
-  padding-top: 2rem;
+  padding: 1rem;
 }
 
-.website {
+.footer p {
+  margin-top: 2.5rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: #585858;
+}
+
+.footer span {
   color: #1d4ed8;
 }
 
-.website:hover {
+.footer span:hover {
   color: #2563eb;
   cursor: pointer;
 }
