@@ -11,13 +11,12 @@ export default function Home() {
 
   return (
     <div
-      className='flex flex-col items-center justify-center   bg-black overflow-hidden'
+      className='flex flex-col items-center justify-center  overflow-hidden bg-black '
       style={{
         backgroundImage:
           "linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)), url(/hero-bg.jpg)",
 
-        "background-repeat": "no-repeat",
-        "background-size": "auto",
+        "background-size": "fill",
       }}
     >
       <Head>
@@ -51,7 +50,7 @@ export default function Home() {
           )}
         </div>
       </header>
-      <main className='flex flex-col items-center justify-center flex-1 px-20 text-center  pt-[9rem] pb-[11rem]'>
+      <main className='flex flex-col items-center justify-center flex-1 px-20 text-center  pt-[9rem] pb-[11rem]  '>
         <h1 className='text-5xl font-semibold text-white max-w-xl'>
           Unlimited movies, TV shows, and more.
         </h1>
@@ -93,37 +92,39 @@ export default function Home() {
       </main>
       <Promo />
       <FAQ />
-      <p className='text-white font-medium'>
-        Ready to watch? Enter your email to create or restart your membership.
-      </p>
-      <div className='flex mt-4 mb-[5rem] has-tooltip'>
-        <input
-          placeholder='Email address'
-          className='bg-white p-4 w-[40vw] max-w-[400px] '
-        />
-        <span className='tooltip rounded shadow-lg p-1 bg-red-700 text-white -mt-8'>
-          Authorization Coming Soon. Click &quot;Get Started&quot; to see
-          logged-in view without entering email.
-        </span>
-        <Link href='/dashboard'>
-          <a className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white  text-[1.625rem] px-8 '>
-            Get Started
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              className='h-6 w-6'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M9 5l7 7-7 7'
-              />
-            </svg>
-          </a>
-        </Link>
+      <div className=' flex flex-col items-center justify-center bg-black w-[100%]'>
+        <p className='text-white font-medium'>
+          Ready to watch? Enter your email to create or restart your membership.
+        </p>
+        <div className='flex mt-4 mb-[5rem] has-tooltip '>
+          <input
+            placeholder='Email address'
+            className='bg-white p-4 w-[40vw] max-w-[400px] '
+          />
+          <span className='tooltip rounded shadow-lg p-1 bg-red-700 text-white -mt-8'>
+            Authorization Coming Soon. Click &quot;Get Started&quot; to see
+            logged-in view without entering email.
+          </span>
+          <Link href='/dashboard'>
+            <a className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white  text-[1.625rem] px-8 '>
+              Get Started
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className='h-6 w-6'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M9 5l7 7-7 7'
+                />
+              </svg>
+            </a>
+          </Link>
+        </div>
       </div>
       <Footer />
     </div>
