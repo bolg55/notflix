@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from "next/head"
-import { signIn, signOut, useSession } from "next-auth/client"
-import Link from "next/link"
-import Promo from "../components/Promo"
-import FAQ from "../components/FAQ"
-import Footer from "../components/Footer"
+import Head from "next/head";
+import { signIn, signOut, useSession } from "next-auth/client";
+import Link from "next/link";
+import Promo from "../components/Promo";
+import FAQ from "../components/FAQ";
+import Footer from "../components/Footer";
 
 export default function Home() {
-  const [session, loading] = useSession()
+  const [session, loading] = useSession();
 
   return (
     <div
@@ -17,8 +17,7 @@ export default function Home() {
           "linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)), url(/hero-bg.jpg)",
 
         "background-size": "fill",
-      }}
-    >
+      }}>
       <Head>
         <title>Notflix. A Netflix Clone</title>
         <meta
@@ -36,15 +35,13 @@ export default function Home() {
           {!session ? (
             <button
               onClick={() => signIn("google")}
-              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-lg font-semibold px-5 py-1 rounded'
-            >
+              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-lg font-semibold px-5 py-1 rounded'>
               Sign In
             </button>
           ) : (
             <button
               onClick={() => signOut()}
-              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-md font-semibold px-5 py-1 rounded'
-            >
+              className='flex items-center bg-blue-700 hover:bg-blue-600 transition-all text-white text-md font-semibold px-5 py-1 rounded'>
               Sign Out
             </button>
           )}
@@ -77,8 +74,7 @@ export default function Home() {
                 className='h-6 w-6'
                 fill='none'
                 viewBox='0 0 24 24'
-                stroke='currentColor'
-              >
+                stroke='currentColor'>
                 <path
                   strokeLinecap='round'
                   strokeLinejoin='round'
@@ -113,8 +109,7 @@ export default function Home() {
                 className='h-6 w-6'
                 fill='none'
                 viewBox='0 0 24 24'
-                stroke='currentColor'
-              >
+                stroke='currentColor'>
                 <path
                   strokeLinecap='round'
                   strokeLinejoin='round'
@@ -128,5 +123,5 @@ export default function Home() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }
