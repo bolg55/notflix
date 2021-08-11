@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "movie-trailer": "^2.1.0",
     "next": "^11.0.1",
     "next-auth": "^3.27.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-youtube": "^7.13.1"
   },
   "devDependencies": {
     "@tailwindcss/jit": "^0.1.18",
