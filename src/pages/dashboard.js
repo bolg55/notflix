@@ -3,6 +3,7 @@ import requests from "../requests";
 import Row from "../components/Row";
 import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 
 const Dashboard = () => {
   return (
@@ -26,6 +27,7 @@ const Dashboard = () => {
       <Row title='Horror Movies' fetchUrl={requests.fetchHorrorMovies} />
       <Row title='Romantic Movies' fetchUrl={requests.fetchRomanceMovies} />
       <Row title='Documentaries' fetchUrl={requests.fetchDocumentaries} />
+      <Footer />
     </div>
   );
 };
